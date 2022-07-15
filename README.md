@@ -12,5 +12,3 @@ A flutter application containing the Salvation Army Church English Hymns.
 - Change app theme
 
 ## Screenshots
-
-<img src="homepage.png" height="300em" /> <img src="hymnpage.png" height="300em" />
