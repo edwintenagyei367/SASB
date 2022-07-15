@@ -1,6 +1,6 @@
 # SASB
 
-A new Flutter project.
+A flutter application containing the Salvation Army Church English Hymns.
 
 ## Getting Started
 
