@@ -13,21 +13,4 @@ A flutter application containing the Salvation Army Church English Hymns.
 
 ## Screenshots
 
-<div style="text-align: center">
-  <table>
-    <tr>
-      <td style="text-align: center">
-        <img src="homepage.jpeg" width="200" />
-      </td>
-      <td style="text-align: center">
-        <img src="hymnpage.jpeg" width="200" />
-      </td>
-      <td style="text-align: center">
-        <img src="detailpage.jpeg" width="200" />
-      </td>
-      <td style="text-align: center">
-        <img src="settings.jpeg" width="200" />
-      </td>
-    </tr>
-  </table>
-</div>
+<img src="homepage.png" height="300em" /> <img src="hymnpage.png" height="300em" />
