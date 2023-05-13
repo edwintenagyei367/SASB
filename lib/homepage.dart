@@ -18,10 +18,10 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin {
   late AnimationController animationController;
 
-  final List _listItem = [
+  /*final List _listItem = [
     Icon(Icons.search),
     Icon(Icons.book),
-  ];
+  ];*/
 
 
   @override
@@ -37,7 +37,7 @@ class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin
                 child: Clipper()
             ),
             SizedBox(
-              height: 60,
+              height: MediaQuery.of(context).size.height * 0.09,
             ),
             Expanded(
               child: Padding(
@@ -46,30 +46,37 @@ class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin
                   duration: Duration(milliseconds: 900),
                   delay: Duration(milliseconds: 1600),
                   child: GridView.count(
-                    crossAxisCount: 2,
+                    crossAxisCount: (MediaQuery.of(context).orientation == Orientation.landscape) ? 4 : 2,
+                      //crossAxisSpacing: 20,
+                      //mainAxisSpacing: 20,
                     children: [
                       GestureDetector(
-                        child: Card(
-                          color: Colors.blue,
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: Colors.transparent,
-                                  radius: 35,
-                                  child: Image.asset('images/history.png'),
-                                ),
-                                SizedBox(
-                                  height: 25,
-                                ),
-                                Text("History",
-                                  //style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold),
-                                  style: theme.textTheme.subtitle1
-                                )
-                              ],
-                            ),
+                        child: Container(
+                          margin: EdgeInsets.all(40),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            border: Border.all(color: Colors.black12)
                           ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: Colors.transparent,
+                                radius: 20,
+                                child: Image.asset('images/history.png',
+                                  color: Colors.red,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text("History",
+                                style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold,color: Colors.red),
+                                //style: theme.textTheme.subtitle1
+                              )
+                            ],
+                          )
                         ),
                         onTap: (){
                           Navigator.push(
@@ -79,27 +86,34 @@ class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin
                         },
                       ),
                       GestureDetector(
-                        child: Card(
-                          color: Colors.red,
-                          child: Center(
+                        child: Container(
+                            margin: EdgeInsets.all(40),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(Radius.circular(20)),
+                                border: Border.all(color: Colors.black12)
+                            ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 CircleAvatar(
                                   backgroundColor: Colors.transparent,
-                                  radius: 35,
-                                  child: Image.asset('images/doctrine.png'),
+                                  radius: 20,
+                                  child: Image.asset('images/doctrine.png',color: Colors.red,),
                                 ),
                                 SizedBox(
-                                  height: 25,
+                                  height: 5,
                                 ),
-                                Text("Doctrines",
-                                  //style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold),
-                                  style: theme.textTheme.subtitle1
+                                Text("Affirmation",
+                                  style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold,color: Colors.red),
+                                  //style: theme.textTheme.subtitle1
+                                ),
+                                Text("Of Faith",
+                                  style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold,color: Colors.red),
+                                  //style: theme.textTheme.subtitle1
                                 )
                               ],
-                            ),
-                          ),
+                            )
                         ),
                         onTap: (){
                           Navigator.push(
@@ -109,27 +123,30 @@ class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin
                         },
                       ),
                       GestureDetector(
-                        child: Card(
-                          color: Colors.yellow,
-                          child: Center(
+                        child: Container(
+                            margin: EdgeInsets.all(40),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(Radius.circular(20)),
+                                border: Border.all(color: Colors.black12)
+                            ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 CircleAvatar(
                                   backgroundColor: Colors.transparent,
-                                  radius: 35,
-                                  child: Image.asset('images/hymns.png'),
+                                  radius: 20,
+                                  child: Image.asset('images/hymns.png',color: Colors.red),
                                 ),
                                 SizedBox(
-                                  height: 25,
+                                  height: 5,
                                 ),
-                                Text("Hymns",
-                                  //style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold),
-                                  style: theme.textTheme.subtitle1
+                                Text("Hymns ",
+                                  style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold,color: Colors.red),
+                                  //style: theme.textTheme.subtitle1
                                 )
                               ],
-                            ),
-                          ),
+                            )
                         ),
                         onTap: (){
                           Navigator.push(
@@ -139,27 +156,30 @@ class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin
                         },
                       ),
                       GestureDetector(
-                        child: Card(
-                          color: Colors.green,
-                          child: Center(
+                        child: Container(
+                            margin: EdgeInsets.all(40),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(Radius.circular(20)),
+                                border: Border.all(color: Colors.black12)
+                            ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 CircleAvatar(
                                   backgroundColor: Colors.transparent,
-                                  radius: 35,
-                                  child: Image.asset('images/info.png'),
+                                  radius: 20,
+                                  child: Image.asset('images/info.png',color: Colors.red),
                                 ),
                                 SizedBox(
-                                  height: 25,
+                                  height: 5,
                                 ),
                                 Text("About",
-                                  //style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold),
-                                  style: theme.textTheme.subtitle1
+                                  style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold,color: Colors.red),
+                                  //style: theme.textTheme.subtitle1
                                 )
                               ],
-                            ),
-                          ),
+                            )
                         ),
                         onTap: (){
                           Navigator.push(
@@ -173,22 +193,6 @@ class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin
                 ),
               )
             ),
-            FadeInUp(
-              duration: Duration(milliseconds: 800),
-              delay: Duration(milliseconds: 1600),
-              child: Align(
-                  alignment: FractionalOffset.bottomCenter,
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom: 8.0),
-                    child: Text("Created by Tenagyei Edwin Kwadwo",
-                      //style:TextStyle(fontWeight: FontWeight.bold),
-                      style: theme.textTheme.subtitle1!.copyWith(
-                        fontSize: 15
-                      )
-                    ),
-                  )
-              )
-            )
           ],
         )
       ),

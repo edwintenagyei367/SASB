@@ -46,6 +46,7 @@ class _AboutPageState extends State<AboutPage> {
         padding: const EdgeInsets.all(18.0),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "SASB is an app that contains all the official English hymns of the Salvation Army Church.",
@@ -75,11 +76,13 @@ class _AboutPageState extends State<AboutPage> {
               SizedBox(
                 height: 200,
               ),
-              Text(
-                  "Copyright \u00a9  2022",
-                  style:theme.textTheme.subtitle1!.copyWith(
-                      fontWeight: FontWeight.bold
-                  )
+              Center(
+                child: Text(
+                    "Copyright \u00a9  2022",
+                    style:theme.textTheme.subtitle1!.copyWith(
+                        fontWeight: FontWeight.bold
+                    )
+                ),
               ),
             ],
 

@@ -17,7 +17,8 @@ class _ClipperState extends State<Clipper> {
           clipper: WaveClipper(),
           child: SizedBox(
             height: 150,
-            width: 500,
+            //width: 500,
+            width: double.infinity,
             child: Container(
               height: double.infinity,
               width: double.infinity,

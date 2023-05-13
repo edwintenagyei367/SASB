@@ -90,7 +90,6 @@ class _DetailPageState extends State<DetailPage> {
         style: theme.textTheme.subtitle1!.copyWith(
           fontStyle: FontStyle.italic,
           fontWeight: FontWeight.bold
-
         )
       ));
     }

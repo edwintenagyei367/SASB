@@ -1,0 +1,7 @@
+flutter_native_splash:
+  image: images/app_logo.png
+  color: "FFFFFF"
+  android_fullscreen: true
+  android_gravity: center
+  android_height: 100dp
+  android_width: 300dp

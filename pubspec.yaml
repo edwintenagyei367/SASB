@@ -39,6 +39,7 @@ dependencies:
   animate_do: any
 
 dev_dependencies:
+  flutter_native_splash:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.9.3
@@ -66,14 +67,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - images/icon.ico
-    - images/history.png
-    - images/doctrine.png
-    - images/hymns.png
-    - images/info.png
-    - images/Catherine-Booth.jpg
-    - images/William_Booth.jpg
-    - assets/hymns.json
+    - images/
+    - assets/
 
   fonts:
     - family: OpenSansCondensed Bold
