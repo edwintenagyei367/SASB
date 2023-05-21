@@ -46,7 +46,7 @@ class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin
                       //mainAxisSpacing: 20,
                     children: [
                       CategoryWidget('images/history.png', 'History', HistoryPage()),
-                      CategoryWidget('images/doctrine.png', 'Doctrine', EnglishDoc()),
+                      CategoryWidget('images/doctrine.png', 'Doctrines', EnglishDoc()),
                       CategoryWidget('images/hymns.png', 'Hymns', EnglishHymnPage()),
                       CategoryWidget('images/info.png', 'About', AboutPage()),
                     ],
