@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:salvation_army_hymn/components/categories_widget.dart';
 import './utils/clipper.dart';
 import './screens/english_doctrine.dart';
 import './screens/english_hymn_page.dart';
@@ -17,12 +18,6 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin {
   late AnimationController animationController;
-
-  /*final List _listItem = [
-    Icon(Icons.search),
-    Icon(Icons.book),
-  ];*/
-
 
   @override
   Widget build(BuildContext context) {
@@ -50,144 +45,10 @@ class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin
                       //crossAxisSpacing: 20,
                       //mainAxisSpacing: 20,
                     children: [
-                      GestureDetector(
-                        child: Container(
-                          margin: EdgeInsets.all(40),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            border: Border.all(color: Colors.black12)
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.transparent,
-                                radius: 20,
-                                child: Image.asset('images/history.png',
-                                  color: Colors.red,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text("History",
-                                style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold,color: Colors.red),
-                                //style: theme.textTheme.subtitle1
-                              )
-                            ],
-                          )
-                        ),
-                        onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => HistoryPage()),
-                          );
-                        },
-                      ),
-                      GestureDetector(
-                        child: Container(
-                            margin: EdgeInsets.all(40),
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.all(Radius.circular(20)),
-                                border: Border.all(color: Colors.black12)
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: Colors.transparent,
-                                  radius: 20,
-                                  child: Image.asset('images/doctrine.png',color: Colors.red,),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text("Affirmation",
-                                  style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold,color: Colors.red),
-                                  //style: theme.textTheme.subtitle1
-                                ),
-                                Text("Of Faith",
-                                  style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold,color: Colors.red),
-                                  //style: theme.textTheme.subtitle1
-                                )
-                              ],
-                            )
-                        ),
-                        onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => EnglishDoc()),
-                          );
-                        },
-                      ),
-                      GestureDetector(
-                        child: Container(
-                            margin: EdgeInsets.all(40),
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.all(Radius.circular(20)),
-                                border: Border.all(color: Colors.black12)
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: Colors.transparent,
-                                  radius: 20,
-                                  child: Image.asset('images/hymns.png',color: Colors.red),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text("Hymns ",
-                                  style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold,color: Colors.red),
-                                  //style: theme.textTheme.subtitle1
-                                )
-                              ],
-                            )
-                        ),
-                        onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => EnglishHymnPage()),
-                          );
-                        },
-                      ),
-                      GestureDetector(
-                        child: Container(
-                            margin: EdgeInsets.all(40),
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.all(Radius.circular(20)),
-                                border: Border.all(color: Colors.black12)
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: Colors.transparent,
-                                  radius: 20,
-                                  child: Image.asset('images/info.png',color: Colors.red),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text("About",
-                                  style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold,color: Colors.red),
-                                  //style: theme.textTheme.subtitle1
-                                )
-                              ],
-                            )
-                        ),
-                        onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => AboutPage()),
-                          );
-                        },
-                      ),
+                      CategoryWidget('images/history.png', 'History', HistoryPage()),
+                      CategoryWidget('images/doctrine.png', 'Doctrine', EnglishDoc()),
+                      CategoryWidget('images/hymns.png', 'Hymns', EnglishHymnPage()),
+                      CategoryWidget('images/info.png', 'About', AboutPage()),
                     ],
                   ),
                 ),
